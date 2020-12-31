@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>Delete Player</h1>
+<p>See your ID on All Players&Rec List page!</p>
+
+<!-- #########################################
+### FORM - THIS IS FROM forms.py ###
+######################################### -->
+<form method="post">
+  {{form.hidden_tag()}}
+  {{form.id.label}} {{form.id}}
+  {{form.submit()}}
+</form>
+<!-- ########################################### -->
+
+{% endblock %}

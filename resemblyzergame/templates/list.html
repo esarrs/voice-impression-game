@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1 id="rankingTitle">R    A    N    K    I    N    G</h1>
+<img id="crown-img" src="{{url_for('static',filename='crown.png')}}" alt="crown-img">
+
+<img id="trophy-img" src="{{url_for('static',filename='trophy.png')}}" alt="trophy-img">
+
+<table>
+  <thead>
+    <th>Rank</th>
+
+
+  </thead>
+
+</table>
+
+<ol>
+
+
+  {% for pup in allpuppies | sort(attribute="score",reverse=True) %}
+
+      <li id="rankingList">{{pup}}</li>
+  {% endfor %}
+</ol>
+
+
+
+{% endblock %}
